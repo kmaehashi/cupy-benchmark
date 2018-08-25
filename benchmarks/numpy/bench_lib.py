@@ -5,9 +5,12 @@ from __future__ import absolute_import, division, print_function
 
 from .common import Benchmark
 
-import numpy as np
+import cupy as np
+
+from benchmarks.utils import sync
 
 
+@sync
 class Pad(Benchmark):
     """Benchmarks for `numpy.pad`."""
 

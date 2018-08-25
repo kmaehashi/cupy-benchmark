@@ -71,6 +71,7 @@ class Randint_dtype(Benchmark):
         np.random.randint(0, high + 1, size=10**5, dtype=name)
 
 
+@sync
 class Permutation(Benchmark):
     def setup(self):
         self.n = 10000
